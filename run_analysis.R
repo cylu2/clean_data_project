@@ -41,13 +41,13 @@
     ## Test Data Set
     
     # Subject    
-    sbjTest <- read.table("test/subject_test.txt", col.names = "SubjectIndex")
+    sbjTest <- read.table("test/subject_test.txt", col.names = "Subject")
     
     # Data-X (Measurements)    
     xTest <- read.table("test/X_test.txt")
     
     # Data-Y (Activities)
-    yTest <- read.table("test/Y_test.txt", col.names = "ActivityIndex")
+    yTest <- read.table("test/Y_test.txt", col.names = "Activity")
 
     # Number of Data
     nTest <- nrow(subTest)   
@@ -57,13 +57,13 @@
     ## Training Data Set
 
     # Subject        
-    sbjTrain <- read.table("train/subject_train.txt", col.names = "SubjectIndex")
+    sbjTrain <- read.table("train/subject_train.txt", col.names = "Subject")
     
     # Data-X (Measurements)        
     xTrain <- read.table("train/X_train.txt")
     
     # Data-Y (Activities)    
-    yTrain <- read.table("train/Y_train.txt", col.names = "ActivityIndex")
+    yTrain <- read.table("train/Y_train.txt", col.names = "Activity")
 
     # Number of Data        
     nTrain <- nrow(subTrain)
@@ -81,10 +81,11 @@
     # Data-Y (Activities)      
     yAll <- rbind(yTrain, yTest)  
     
-    # Number of Data     
-    nAll <- nTest + nTrain
+    # One Big Dataset
+    bigData <- cbind(sbjAll, yAll, xAll)
     
-    write.table(yAll,"Y_all.txt", row.name = FALSE)    
+    # Number of Rows in Data     
+    nAll <- nTest + nTrain
     
 # -----------------------------------------------------------------------------------    
     
@@ -97,13 +98,13 @@
     stdFeatIndex <- grep("std\\(\\)", features$Name)     
     
     # Combine and Sort Indices
-    meanStdFeatIndex <- sort(c(meanFeatIndex, stdFeatIndex))
+    smallFeatIndex <- sort(c(meanFeatIndex, stdFeatIndex))
     
-    # Subset of Features
-    meanStdFeatures <- features$Name[meanStdFeatIndex]
+    # Subset of Feature Names
+    smallFeatNames <- features$Name[smallFeatIndex]
     
-    # Subset of Data-X
-    meanStdX <- xAll[, meanStdFeatIndex]
+    # Subset of bigData
+    smallData <- bigData[, c(1, 2, smallFeatIndex + 2)]
     
 # -----------------------------------------------------------------------------------    
     
@@ -111,7 +112,7 @@
     
     # Create a new character list
     
-    activity <- as.character(yAll[[1]])
+    activity <- as.character(smallData$Activity)
     
     # Replace Activity Index by the corresponding Activity Name
     
@@ -121,34 +122,26 @@
     }
     
     # Create New Column
-    yAll$Activity <- activity
-    
-    # yAll Summary
-    # yAll$ActivityIndex : Activity Index
-    # yAll$Activity      : Descriptive Activity Name
+    smallData$Activity <- activity
 
 # -----------------------------------------------------------------------------------    
     
     ## Make Labels (TASK #4)
     
     # Rules: 
+    # Replace the first letter in the name 't' by 'time'
+    # Replace the first letter in the name 'f' by 'freq'
     # Remove "-", "(", ")" and capitalize the first letter after "-"
     # Replace "," by "."
     # Use make.names() to create valid variable names.
-    
-    # All
-    tmp <- gsub("-(\\w)", "\\U\\1", featNames, perl = TRUE)
-    tmp <- gsub("\\(|\\)", "", tmp)
-    cleanFeatNames <- gsub("\\,", "\\.", tmp)
-    names(xAll) <- make.names(cleanFeatNames, unique=TRUE, allow_ = TRUE)
-    write.table(xAll,"X_all.txt", row.name = FALSE)     
 
-    # Table Subset (Mean & Std)
-    tmp <- gsub("-(\\w)", "\\U\\1", meanStdFeatures, perl = TRUE)
+    tmp <- gsub("^f", "freq", smallFeatNames, perl = TRUE)    
+    tmp <- gsub("^t", "time", tmp, perl = TRUE)    
+    tmp <- gsub("-(\\w)", "\\U\\1", tmp, perl = TRUE)
     tmp <- gsub("\\(|\\)", "", tmp)
-    cleanFeatNames <- gsub("\\,", "\\.", tmp)
-    names(meanStdX) <- make.names(cleanFeatNames, unique=TRUE, allow_ = TRUE)    
-    write.table(meanStdX,"X_mean_std.txt", row.name = FALSE)    
+    tmp <- gsub("\\,", "\\.", tmp)
+    cleanFeatNames <- c(names(smallData)[1:2], tmp)
+    names(smallData) <- make.names(cleanFeatNames, unique = TRUE, allow_ = TRUE)
     
 # -----------------------------------------------------------------------------------
 
@@ -172,7 +165,7 @@
     # Reorder Columns: Activity-Subject-Mean 
     tidyXAll <- tidyXAll[c("Activity","Subject","Mean")]
     
-    write.table(tidyXAll,"activity_subject_mean.txt", row.name = FALSE)
+    write.table(tidyXAll,"activity_subject_mean.txt", row.name=FALSE)
 
 # -----------------------------------------------------------------------------------
     

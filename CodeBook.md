@@ -99,4 +99,6 @@ The output of the code are the clean data files:
 | meanXAll         | A table of mean values for each activity and each subject                   | 
 | tidyXAll         | A tidy data set of meanXAll that contains three columns: Activity, Subject, and Mean |
 
+## Data Transformation
+
 
