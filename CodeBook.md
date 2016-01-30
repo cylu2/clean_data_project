@@ -18,6 +18,18 @@ The dataset includes the following files that will be loaded when the code is ex
 | test/y_test.txt        | Test labels                          | 2947x1   |
 | test/subject_test.txt  | Test subjects                        | 2947x1   |
 
+Important numbers are summarized here:
+
+| Key                            | Number  | 
+| :----------------------------- |:------- |
+| subjects                       | 30      |
+| features                       | 561     |
+| features with mean() and std() | 561     |
+| activities                     | 6       |
+| training data                  | 7352    |
+| test data                      | 2947    |
+| total data                     | 10299   |
+
 
 The R library "*dplyr*" is required for running the code.
 
@@ -98,5 +110,9 @@ The output of the code are the clean data files:
 | tidyXAll         | A tidy data set of gpSmallData that contains mean values for each variable grouped by Activities and Subjects|
 
 ## Data Transformation
+
+In this code, the raw data is clean in the following steps:
+
+1. 
 
 
