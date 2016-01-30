@@ -121,7 +121,8 @@
         activity <- gsub(as.character(i), actLabel$Name[i], activity)
     }
     
-    # Create New Column
+    # Overwrite Data$Activity by New Activity Names
+
     smallData$Activity <- activity
 
 # -----------------------------------------------------------------------------------    
@@ -150,7 +151,7 @@
     # Group Data by Subject
     gpSmallData <- group_by(smallData, Activity, Subject)
     
-    # Summarize and Compute the Mean for Each <easurement
+    # Summarize and Compute the Mean for Each measurement
     tidyData <- summarize_each(gpSmallData, funs(mean))
     
     # Write Table
