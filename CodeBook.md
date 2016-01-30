@@ -47,7 +47,7 @@ The output of the code are the clean data files:
 
 ##### Activity Labels and Features
 
-| Variable Name | Content                                                                        |  
+| Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
 |actLabel       | Data loaded from 'activity_labels.txt' with column names "Index" and "Name"    |
 |features       | Data loaded from 'features.txt' with column names "Index" and "Name"           |
@@ -55,7 +55,7 @@ The output of the code are the clean data files:
 
 ##### Test Set
 
-| Variable Name | Content                                                                        |  
+| Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
 | sbjTest       | Data loaded from 'test/subject_test.txt' with column name "SubjectIndex"       |
 | xTest         | Data loaded from 'test/X_test.txt'                                             |
@@ -64,7 +64,7 @@ The output of the code are the clean data files:
 
 ##### Training Set
 
-| Variable Name | Content                                                                        |  
+| Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
 | sbjTrain      | Data loaded from 'train/subject_train.txt' with column name "SubjectIndex"     |
 | xTrain        | Data loaded from 'train/X_train.txt'                                           |
@@ -73,7 +73,7 @@ The output of the code are the clean data files:
 
 ##### Combined Set
 
-| Variable Name | Content                                                                        |  
+| Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
 | sbjAll        | A combined dataset of sbjTest and sbjTrain                                     |
 | xAll          | A combined dataset of xTest and xTrain                                         |
@@ -82,7 +82,7 @@ The output of the code are the clean data files:
 
 ##### Subset of X with mean() and std() 
 
-| Variable Name    | Content                                                                     |  
+| Variable         | Content                                                                     |  
 | :--------------- | :-------------------------------------------------------------------------- |
 | meanFeatIndex    | Indices of the columns that contain Mean()                                  |
 | stdFeatIndex     | Indices of the columns that contain Std()                                   |
@@ -92,7 +92,7 @@ The output of the code are the clean data files:
 
 ##### Tidy Data
 
-| Variable Name    | Content                                                                     |  
+| Variable         | Content                                                                     |  
 | :--------------- | :-------------------------------------------------------------------------- |
 | cleanFeatNames   | Descriptive Feature Names                                                   |
 | gpXAll           | xAll data grouped by subject                                                |
