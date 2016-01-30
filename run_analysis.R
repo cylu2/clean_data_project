@@ -24,9 +24,9 @@
 
 # -----------------------------------------------------------------------------------    
 
-    ## Load Data Sets
+    ## Change Working Directory Path if Necessary
 
-    setwd("./UCI HAR Dataset/")
+    # setwd("./UCI HAR Dataset/")
 
 # -----------------------------------------------------------------------------------    
     
@@ -147,25 +147,14 @@
 
     ## Tidy Data Set of the Mean for Each Activity and Subject (TASK #5)
 
-    # Create Subset Column in xAll
-    xAll$Subject <- sbjAll[[1]]
-    
     # Group Data by Subject
-    gpXAll <- group_by(xAll, Subject) 
+    gpSmallData <- group_by(smallData, Activity, Subject)
     
     # Summarize and Compute the Mean for Each <easurement
-    meanXAll <- summarize_each(gpXAll, funs(mean))
+    tidyData <- summarize_each(gpSmallData, funs(mean))
     
-    # Make Tidy Data
-    tidyXAll <- gather(meanXAll, Subject)
-    
-    # Name Columns
-    names(tidyXAll) <- c("Subject","Activity","Mean")
-    
-    # Reorder Columns: Activity-Subject-Mean 
-    tidyXAll <- tidyXAll[c("Activity","Subject","Mean")]
-    
-    write.table(tidyXAll,"activity_subject_mean.txt", row.name=FALSE)
+    # Write Table
+    write.table(tidyData,"tidyData.txt", row.name = FALSE)
 
 # -----------------------------------------------------------------------------------
     
