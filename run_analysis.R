@@ -151,7 +151,7 @@
     # Group Data by Subject
     gpSmallData <- group_by(smallData, Activity, Subject)
     
-    # Summarize and Compute the Mean for Each measurement
+    # Summarize and Compute the Mean for Each Measurement
     tidyData <- summarize_each(gpSmallData, funs(mean))
     
     # Write Table
