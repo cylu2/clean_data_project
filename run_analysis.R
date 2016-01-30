@@ -84,7 +84,7 @@
     # Number of Data     
     nAll <- nTest + nTrain
     
-    write.table(yAll,"Y_all.txt", row.name=FALSE)    
+    write.table(yAll,"Y_all.txt", row.name = FALSE)    
     
 # -----------------------------------------------------------------------------------    
     
@@ -141,14 +141,14 @@
     tmp <- gsub("\\(|\\)", "", tmp)
     cleanFeatNames <- gsub("\\,", "\\.", tmp)
     names(xAll) <- make.names(cleanFeatNames, unique=TRUE, allow_ = TRUE)
-    write.table(xAll,"X_all.txt", row.name=FALSE)     
+    write.table(xAll,"X_all.txt", row.name = FALSE)     
 
     # Table Subset (Mean & Std)
     tmp <- gsub("-(\\w)", "\\U\\1", meanStdFeatures, perl = TRUE)
     tmp <- gsub("\\(|\\)", "", tmp)
     cleanFeatNames <- gsub("\\,", "\\.", tmp)
     names(meanStdX) <- make.names(cleanFeatNames, unique=TRUE, allow_ = TRUE)    
-    write.table(meanStdX,"X_mean_std.txt", row.name=FALSE)    
+    write.table(meanStdX,"X_mean_std.txt", row.name = FALSE)    
     
 # -----------------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@
     # Reorder Columns: Activity-Subject-Mean 
     tidyXAll <- tidyXAll[c("Activity","Subject","Mean")]
     
-    write.table(tidyXAll,"activity_subject_mean.txt", row.name=FALSE)
+    write.table(tidyXAll,"activity_subject_mean.txt", row.name = FALSE)
 
 # -----------------------------------------------------------------------------------
     
