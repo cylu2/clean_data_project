@@ -24,7 +24,7 @@ Important numbers are summarized here:
 | :----------------------------- |:------- |
 | subjects                       | 30      |
 | features                       | 561     |
-| features with mean() and std() | 561     |
+| features with mean() and std() | 66      |
 | activities                     | 6       |
 | training data                  | 7352    |
 | test data                      | 2947    |
