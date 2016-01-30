@@ -40,34 +40,34 @@ The output of the code are the clean data files:
 
 ### Variables 
 
-* List of Activity Labels and Features
+1. List of Activity Labels and Features
 
 - 'actLabel'  [ Data loaded from 'activity_labels.txt' with column names "Index" and "Name" ]
 - 'features'  [ Data loaded from 'features.txt' with column names "Index" and "Name" ]
 - 'featNames' [ Feature names copied from features$Name ]
 
-* Test Set
+2. Test Set
 
 - 'sbjTest'   [ Data loaded from 'test/subject_test.txt' with column name "SubjectIndex" ]
 - 'xTest'     [ Data loaded from 'test/X_test.txt' ]
 - 'yTest'     [ Data loaded from 'test/Y_test.txt' with column name "ActivityIndex" ]
 - 'nTest'     [ Number of data in the test set ]
 
-* Training Set
+3. Training Set
 
 - 'sbjTrain'  [ Data loaded from 'train/subject_train.txt' with column name "SubjectIndex" ]
 - 'xTrain'    [ Data loaded from 'train/X_train.txt' ]
 - 'yTrain'    [ Data loaded from 'train/Y_train.txt' with column name "ActivityIndex" ]
 - 'nTrain'    [ Number of data in the training set ]
 
-* Combined Set
+4. Combined Set
 
 - 'sbjAll'    [ A combined dataset of sbjTest and sbjTrain ]
 - 'xAll'      [ A combined dataset of xTest and xTrain ]
 - 'yAll'      [ A combined dataset of yTest and yTrain ]
 - 'nAll'      [ Total number of the combined dataset = nTest + nTrain ]
 
-* Subset of X with mean() and std() 
+5. Subset of X with mean() and std() 
 
 - 'meanFeatIndex'    [ Indices of the columns that contain Mean() ]
 - 'stdFeatIndex'     [ Indices of the columns that contain Std() ]
@@ -75,7 +75,7 @@ The output of the code are the clean data files:
 - 'meanStdFeatures'  [ Feature names of the columns that contain Mean() and Std() ]
 - 'meanStdX'         [ X data of the columns that contain both Mean() and Std() ]
 
-* Tidy Data
+6. Tidy Data
 
 - 'cleanFeatNames'   [ Descriptive Feature Names ]
 - 'gpXAll'           [ xAll data grouped by subject ]
