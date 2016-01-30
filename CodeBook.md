@@ -6,8 +6,9 @@ The data was originally collected from the accelerometers from the Samsung Galax
 for the study of Human Activity Recognition Using Smartphones Dataset
 
 The dataset includes the following files that will be loaded when the code is executed
+
 | File Name              | Data                                 | Size     |
-|------------------------|--------------------------------------|----------| 
+| ------------------------ |-------------------------------------- | ---------- | 
 | features.txt           | List of all features                 | 561x2    |
 | activity_labels.txt    | Class labels with their activity name| 6x2      |
 | train/X_train.txt      | Training set                         | 7352x561 |
