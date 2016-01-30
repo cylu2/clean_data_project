@@ -1,6 +1,6 @@
 ## Basic Information
 
-This code 'run_analysis.R' cleans and analizes the data obtained from the website:
+This code '*run_analysis.R*' cleans and analizes the data obtained from the website:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 The data was originally collected from the accelerometers from the Samsung Galaxy S smartphone 
 for the study of Human Activity Recognition Using Smartphones Dataset.
@@ -36,10 +36,12 @@ The code completes the following tasks:
 
 The output of the code are the clean data files:
 
-- 'X_all.csv'                [ Combines X_Test, X_train, with Labels,                size: 10299x562 ]
-- 'Y_all.csv'                [ Combines Y_test, Y_train, with Labels,                size: 10299x2 ]
-- 'X_mean_std.csv'           [ Subset of X_all, contains only mean() and std() data, size: 10299x66 ]
-- 'acivity_subject_mean.csv' [ Tidy data set of the means calculated for each activity and each subject,size: 16830x3 ] 
+| File Name                 | Data                                                                     | Size        |
+| :------------------------ |:------------------------------------------------------------------------ | :---------- | 
+| X_all.csv'                | Combines X_Test, X_train, with Labels                                    | 10299x562   |
+| Y_all.csv'                | Combines Y_test, Y_train, with Labels                                    | 10299x2     |
+| X_mean_std.csv'           | Subset of X_all, contains only mean() and std() data                     | 10299x66    |
+| acivity_subject_mean.csv  | Tidy data set of the means calculated for each activity and each subject | 16830x3     | 
 
 ## Variables 
 
