@@ -38,10 +38,7 @@ The output of the code are the clean data files:
 
 | File Name                 | Data                                                                     | Size        |
 | :------------------------ |:------------------------------------------------------------------------ | :---------- | 
-| X_all.txt                 | Combines X_Test, X_train, with Labels                                    | 10299x562   |
-| Y_all.txt                 | Combines Y_test, Y_train, with Labels                                    | 10299x2     |
-| X_mean_std.txt            | Subset of X_all, contains only mean() and std() data                     | 10299x66    |
-| acivity_subject_mean.txt  | Tidy data set of the means calculated for each activity and each subject | 16830x3     | 
+| tidyData.txt  | Tidy data set of the means calculated for each activity and each subject | 181x68     | 
 
 ## Variables 
 
@@ -53,7 +50,7 @@ The output of the code are the clean data files:
 |features       | Data loaded from 'features.txt' with column names "Index" and "Name"           |
 |featNames      | Feature names copied from features$Name                                        |
 
-##### Test Set
+##### Test Data Set
 
 | Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
@@ -62,7 +59,7 @@ The output of the code are the clean data files:
 | yTest         | Data loaded from 'test/Y_test.txt' with column name "ActivityIndex"            |
 | nTest         | Number of data in the test set                                                 |
 
-##### Training Set
+##### Training Data Set
 
 | Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
@@ -71,7 +68,7 @@ The output of the code are the clean data files:
 | yTrain        | Data loaded from 'train/Y_train.txt' with column name "ActivityIndex"          |
 | nTrain        | Number of data in the training set                                             |
 
-##### Combined Set
+##### Combined Data Set
 
 | Variable      | Content                                                                        |  
 | :------------ | :----------------------------------------------------------------------------- |
@@ -79,25 +76,26 @@ The output of the code are the clean data files:
 | xAll          | A combined dataset of xTest and xTrain                                         |
 | yAll          | A combined dataset of yTest and yTrain                                         |
 | nAll          | Total number of the combined dataset = nTest + nTrain                          |
+| bigData       | Single dataset containing sbjAll, xAll, and yAll                               |
 
-##### Subset of X with mean() and std() 
+
+##### Subset of bigData with mean() and std() 
 
 | Variable         | Content                                                                     |  
 | :--------------- | :-------------------------------------------------------------------------- |
 | meanFeatIndex    | Indices of the columns that contain Mean()                                  |
 | stdFeatIndex     | Indices of the columns that contain Std()                                   |
-| meanStdFeatIndex | Indices of the columns that contain both Mean() and Std()                   |
-| meanStdFeatures  | Feature names of the columns that contain Mean() and Std()                  |
-| meanStdX         | X data of the columns that contain both Mean() and Std()                    |
+| smallFeatIndex   | Indices of the columns that contain both Mean() and Std()                   |
+| smallFeatNames   | Feature names of the columns that contain Mean() and Std()                  |
+| smallData        | A subset of bigData that contain both Mean() and Std() columns              |
 
 ##### Tidy Data
 
 | Variable         | Content                                                                     |  
 | :--------------- | :-------------------------------------------------------------------------- |
 | cleanFeatNames   | Descriptive Feature Names                                                   |
-| gpXAll           | xAll data grouped by subject                                                |
-| meanXAll         | A table of mean values for each activity and each subject                   | 
-| tidyXAll         | A tidy data set of meanXAll that contains three columns: Activity, Subject, and Mean |
+| gpSmallData      | smallData grouped by Activity and Subject                                   |
+| tidyXAll         | A tidy data set of gpSmallData that contains mean values for each variable grouped by Activities and Subjects|
 
 ## Data Transformation
 
