@@ -1,4 +1,4 @@
-### Basic Information
+## Basic Information
 
 This code 'run_analysis.R' cleans and analizes the data obtained from the website:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
@@ -20,7 +20,7 @@ The R library "dplyr" is required for running the code.
 
 The code was developed and tested using RStudio (Version 0.99.489)
 
-### Functions and Outputs
+## Functions and Outputs
 
 The code completes the following tasks:
 
@@ -38,36 +38,36 @@ The output of the code are the clean data files:
 - 'X_mean_std.csv'           [ Subset of X_all, contains only mean() and std() data, size: 10299x66 ]
 - 'acivity_subject_mean.csv' [ Tidy data set of the means calculated for each activity and each subject,size: 16830x3 ] 
 
-### Variables 
+## Variables 
 
-## List of Activity Labels and Features
+#### List of Activity Labels and Features
 
 - 'actLabel'  [ Data loaded from 'activity_labels.txt' with column names "Index" and "Name" ]
 - 'features'  [ Data loaded from 'features.txt' with column names "Index" and "Name" ]
 - 'featNames' [ Feature names copied from features$Name ]
 
-## Test Set
+#### Test Set
 
 - 'sbjTest'   [ Data loaded from 'test/subject_test.txt' with column name "SubjectIndex" ]
 - 'xTest'     [ Data loaded from 'test/X_test.txt' ]
 - 'yTest'     [ Data loaded from 'test/Y_test.txt' with column name "ActivityIndex" ]
 - 'nTest'     [ Number of data in the test set ]
 
-## Training Set
+#### Training Set
 
 - 'sbjTrain'  [ Data loaded from 'train/subject_train.txt' with column name "SubjectIndex" ]
 - 'xTrain'    [ Data loaded from 'train/X_train.txt' ]
 - 'yTrain'    [ Data loaded from 'train/Y_train.txt' with column name "ActivityIndex" ]
 - 'nTrain'    [ Number of data in the training set ]
 
-## Combined Set
+#### Combined Set
 
 - 'sbjAll'    [ A combined dataset of sbjTest and sbjTrain ]
 - 'xAll'      [ A combined dataset of xTest and xTrain ]
 - 'yAll'      [ A combined dataset of yTest and yTrain ]
 - 'nAll'      [ Total number of the combined dataset = nTest + nTrain ]
 
-## Subset of X with mean() and std() 
+#### Subset of X with mean() and std() 
 
 - 'meanFeatIndex'    [ Indices of the columns that contain Mean() ]
 - 'stdFeatIndex'     [ Indices of the columns that contain Std() ]
@@ -75,7 +75,7 @@ The output of the code are the clean data files:
 - 'meanStdFeatures'  [ Feature names of the columns that contain Mean() and Std() ]
 - 'meanStdX'         [ X data of the columns that contain both Mean() and Std() ]
 
-## Tidy Data
+#### Tidy Data
 
 - 'cleanFeatNames'   [ Descriptive Feature Names ]
 - 'gpXAll'           [ xAll data grouped by subject ]
