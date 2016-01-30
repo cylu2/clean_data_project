@@ -47,45 +47,56 @@ The output of the code are the clean data files:
 
 ##### Activity Labels and Features
 
-| :---------- | :----------------------------------------------------------------------------- |
-|actLabel     | Data loaded from 'activity_labels.txt' with column names "Index" and "Name" |
-|features     | Data loaded from 'features.txt' with column names "Index" and "Name" |
-|featNames    | Feature names copied from features$Name  |
+| Variable Name | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+|actLabel       | Data loaded from 'activity_labels.txt' with column names "Index" and "Name"    |
+|features       | Data loaded from 'features.txt' with column names "Index" and "Name"           |
+|featNames      | Feature names copied from features$Name                                        |
 
 ##### Test Set
 
-- 'sbjTest'   [ Data loaded from 'test/subject_test.txt' with column name "SubjectIndex" ]
-- 'xTest'     [ Data loaded from 'test/X_test.txt' ]
-- 'yTest'     [ Data loaded from 'test/Y_test.txt' with column name "ActivityIndex" ]
-- 'nTest'     [ Number of data in the test set ]
+| Variable Name | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjTest       | Data loaded from 'test/subject_test.txt' with column name "SubjectIndex"       |
+| xTest         | Data loaded from 'test/X_test.txt'                                             |
+| yTest         | Data loaded from 'test/Y_test.txt' with column name "ActivityIndex"            |
+| nTest         | Number of data in the test set                                                 |
 
 ##### Training Set
 
-- 'sbjTrain'  [ Data loaded from 'train/subject_train.txt' with column name "SubjectIndex" ]
-- 'xTrain'    [ Data loaded from 'train/X_train.txt' ]
-- 'yTrain'    [ Data loaded from 'train/Y_train.txt' with column name "ActivityIndex" ]
-- 'nTrain'    [ Number of data in the training set ]
+| Variable Name | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjTrain      | Data loaded from 'train/subject_train.txt' with column name "SubjectIndex"     |
+| xTrain        | Data loaded from 'train/X_train.txt'                                           |
+| yTrain        | Data loaded from 'train/Y_train.txt' with column name "ActivityIndex"          |
+| nTrain        | Number of data in the training set                                             |
 
 ##### Combined Set
 
-- 'sbjAll'    [ A combined dataset of sbjTest and sbjTrain ]
-- 'xAll'      [ A combined dataset of xTest and xTrain ]
-- 'yAll'      [ A combined dataset of yTest and yTrain ]
-- 'nAll'      [ Total number of the combined dataset = nTest + nTrain ]
+| Variable Name | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjAll        | A combined dataset of sbjTest and sbjTrain                                     |
+| xAll          | A combined dataset of xTest and xTrain                                         |
+| yAll          | A combined dataset of yTest and yTrain                                         |
+| nAll          | Total number of the combined dataset = nTest + nTrain                          |
 
 ##### Subset of X with mean() and std() 
 
-- 'meanFeatIndex'    [ Indices of the columns that contain Mean() ]
-- 'stdFeatIndex'     [ Indices of the columns that contain Std() ]
-- 'meanStdFeatIndex' [ Indices of the columns that contain both Mean() and Std() ]
-- 'meanStdFeatures'  [ Feature names of the columns that contain Mean() and Std() ]
-- 'meanStdX'         [ X data of the columns that contain both Mean() and Std() ]
+| Variable Name    | Content                                                                     |  
+| :--------------- | :-------------------------------------------------------------------------- |
+| meanFeatIndex    | Indices of the columns that contain Mean()                                  |
+| stdFeatIndex     | Indices of the columns that contain Std()                                   |
+| meanStdFeatIndex | Indices of the columns that contain both Mean() and Std()                   |
+| meanStdFeatures  | Feature names of the columns that contain Mean() and Std()                  |
+| meanStdX         | X data of the columns that contain both Mean() and Std()                    |
 
 ##### Tidy Data
 
-- 'cleanFeatNames'   [ Descriptive Feature Names ]
-- 'gpXAll'           [ xAll data grouped by subject ]
-- 'meanXAll'         [ A table of mean values for each activity and each subject ]
-- 'tidyXAll'         [ A tidy data set of meanXAll that contains three columns: Activity, Subject, and Mean ]
+| Variable Name    | Content                                                                     |  
+| :--------------- | :-------------------------------------------------------------------------- |
+| cleanFeatNames   | Descriptive Feature Names                                                   |
+| gpXAll           | xAll data grouped by subject                                                |
+| meanXAll         | A table of mean values for each activity and each subject                   | 
+| tidyXAll         | A tidy data set of meanXAll that contains three columns: Activity, Subject, and Mean |
 
 
