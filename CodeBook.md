@@ -38,10 +38,10 @@ The output of the code are the clean data files:
 
 | File Name                 | Data                                                                     | Size        |
 | :------------------------ |:------------------------------------------------------------------------ | :---------- | 
-| X_all.csv                 | Combines X_Test, X_train, with Labels                                    | 10299x562   |
-| Y_all.csv                 | Combines Y_test, Y_train, with Labels                                    | 10299x2     |
-| X_mean_std.csv            | Subset of X_all, contains only mean() and std() data                     | 10299x66    |
-| acivity_subject_mean.csv  | Tidy data set of the means calculated for each activity and each subject | 16830x3     | 
+| X_all.txt                 | Combines X_Test, X_train, with Labels                                    | 10299x562   |
+| Y_all.txt                 | Combines Y_test, Y_train, with Labels                                    | 10299x2     |
+| X_mean_std.txt            | Subset of X_all, contains only mean() and std() data                     | 10299x66    |
+| acivity_subject_mean.txt  | Tidy data set of the means calculated for each activity and each subject | 16830x3     | 
 
 ## Variables 
 
