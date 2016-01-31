@@ -1,11 +1,22 @@
 # Getting and Cleaning Data Course Project
 
-The data was originally collected from the accelerometers from the Samsung Galaxy S smartphone 
-for the study of *Human Activity Recognition Using Smartphones Dataset*.
+This project uses data from the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
+Learning Repository</a>, a popular repository for machine learning datasets.
 
-The original data files can be downloaded from the website:
+The data we are interested in was originally collected from the accelerometers from the 
+Samsung Galaxy S smartphone for the study of *Human Activity Recognition Using Smartphones Dataset*.
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The original data files can be found on the website:
+
+* <b>Dataset Page</b>: <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">"
+
+* <b>Dataset</b>: <a href="http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip">UCI HAR Dataset.zip</a> [58Mb]
+
+* <b>Description</b>: The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, 
+where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The data package contains the following files that will be used by the program to prepare a tidy dataset for further analysis.
 
