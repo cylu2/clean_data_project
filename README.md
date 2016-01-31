@@ -8,7 +8,7 @@ Samsung Galaxy S smartphone for the study of *Human Activity Recognition Using S
 
 The original data files can be found on the website:
 
-* <b>Dataset Page</b>: <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">"
+* <b>Dataset Page</b>: <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">UCI Data Page</a>
 
 * <b>Dataset</b>: <a href="http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip">UCI HAR Dataset.zip</a> [58Mb]
 
