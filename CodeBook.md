@@ -56,58 +56,58 @@ The output of the code are the clean data files:
 
 ##### * Activity Labels and Features
 
-  | Variable      | Content                                                                        |  
-  | :------------ | :----------------------------------------------------------------------------- |
-  |actLabel       | Data loaded from 'activity_labels.txt' with column names "Index" and "Name"    |
-  |features       | Data loaded from 'features.txt' with column names "Index" and "Name"           |
-  |featNames      | Feature names copied from features$Name                                        |
+| Variable      | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+|actLabel       | Data loaded from 'activity_labels.txt' with column names "Index" and "Name"    |
+|features       | Data loaded from 'features.txt' with column names "Index" and "Name"           |
+|featNames      | Feature names copied from features$Name                                        |
 
 ##### * Test Data Set
 
-  | Variable      | Content                                                                        |  
-  | :------------ | :----------------------------------------------------------------------------- |
-  | sbjTest       | Data loaded from 'test/subject_test.txt' with column name "SubjectIndex"       |
-  | xTest         | Data loaded from 'test/X_test.txt'                                             |
-  | yTest         | Data loaded from 'test/Y_test.txt' with column name "ActivityIndex"            |
-  | nTest         | Number of data in the test set                                                 |
+| Variable      | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjTest       | Data loaded from 'test/subject_test.txt' with column name "SubjectIndex"       |
+| xTest         | Data loaded from 'test/X_test.txt'                                             |
+| yTest         | Data loaded from 'test/Y_test.txt' with column name "ActivityIndex"            |
+| nTest         | Number of data in the test set                                                 |
 
 ##### * Training Data Set
 
-  | Variable      | Content                                                                        |  
-  | :------------ | :----------------------------------------------------------------------------- |
-  | sbjTrain      | Data loaded from 'train/subject_train.txt' with column name "SubjectIndex"     |
-  | xTrain        | Data loaded from 'train/X_train.txt'                                           |
-  | yTrain        | Data loaded from 'train/Y_train.txt' with column name "ActivityIndex"          |
-  | nTrain        | Number of data in the training set                                             |
+| Variable      | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjTrain      | Data loaded from 'train/subject_train.txt' with column name "SubjectIndex"     |
+| xTrain        | Data loaded from 'train/X_train.txt'                                           |
+| yTrain        | Data loaded from 'train/Y_train.txt' with column name "ActivityIndex"          |
+| nTrain        | Number of data in the training set                                             |
 
 ##### * Combined Data Set
 
-  | Variable      | Content                                                                        |  
-  | :------------ | :----------------------------------------------------------------------------- |
-  | sbjAll        | A combined dataset of sbjTest and sbjTrain                                     |
-  | xAll          | A combined dataset of xTest and xTrain                                         |
-  | yAll          | A combined dataset of yTest and yTrain                                         |
-  | nAll          | Total number of the combined dataset = nTest + nTrain                          |
-  | bigData       | Single dataset containing sbjAll, xAll, and yAll                               |
+| Variable      | Content                                                                        |  
+| :------------ | :----------------------------------------------------------------------------- |
+| sbjAll        | A combined dataset of sbjTest and sbjTrain                                     |
+| xAll          | A combined dataset of xTest and xTrain                                         |
+| yAll          | A combined dataset of yTest and yTrain                                         |
+| nAll          | Total number of the combined dataset = nTest + nTrain                          |
+| bigData       | Single dataset containing sbjAll, xAll, and yAll                               |
 
 
 ##### * Subset of bigData with mean() and std() 
 
-  | Variable         | Content                                                                     |  
-  | :--------------- | :-------------------------------------------------------------------------- |
-  | meanFeatIndex    | Indices of the columns that contain Mean()                                  |
-  | stdFeatIndex     | Indices of the columns that contain Std()                                   |
-  | smallFeatIndex   | Indices of the columns that contain both Mean() and Std()                   |
-  | smallFeatNames   | Feature names of the columns that contain Mean() and Std()                  |
-  | smallData        | A subset of bigData that contain both Mean() and Std() columns              |
+| Variable         | Content                                                                     |  
+| :--------------- | :-------------------------------------------------------------------------- |
+| meanFeatIndex    | Indices of the columns that contain Mean()                                  |
+| stdFeatIndex     | Indices of the columns that contain Std()                                   |
+| smallFeatIndex   | Indices of the columns that contain both Mean() and Std()                   |
+| smallFeatNames   | Feature names of the columns that contain Mean() and Std()                  |
+| smallData        | A subset of bigData that contain both Mean() and Std() columns              |
 
 ##### * Tidy Data
 
-  | Variable         | Content                                                                     |  
-  | :--------------- | :-------------------------------------------------------------------------- |
-  | cleanFeatNames   | Descriptive Feature Names                                                   |
-  | gpSmallData      | smallData grouped by Activity and Subject                                   |
-  | tidyXAll         | A tidy data set of gpSmallData that contains mean values for each variable grouped by Activities and Subjects|
+| Variable         | Content                                                                     |  
+| :--------------- | :-------------------------------------------------------------------------- |
+| cleanFeatNames   | Descriptive Feature Names                                                   |
+| gpSmallData      | smallData grouped by Activity and Subject                                   |
+| tidyXAll         | A tidy data set of gpSmallData that contains mean values for each variable grouped by Activities and Subjects|
 
 ## Data Transformation
 
