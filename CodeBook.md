@@ -115,8 +115,8 @@ The output of the code are the clean data files:
 In this code, the raw data is clean in the following steps:
 
 1. Train, Test dataset, and Subject are merged into a single dataset (bigData) by first combining rows (Test and Train) and then columns (Subject, Y, X).
-2. Use grep() to extract the columns with a feature name contains mean() or std(). Column Subject, Activities, and the extracted columns form a new dataset (smallData).
-3. Use gsub() to replace the activity indices by the corresponding activity names, and replace the Activity column by the new name list.
+2. Use grep(...) to extract the columns with a feature name contains mean() or std(). Column Subject, Activities, and the extracted columns form a new dataset (smallData).
+3. Use gsub(...) to replace the activity indices by the corresponding activity names, and replace the Activity column by the new name list.
 4. The feature names selected in step 2 are transformed by removing symbols and capitalizing/modifying certain letters for improving readability.
 
   Examples:
