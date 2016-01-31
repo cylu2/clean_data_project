@@ -7,7 +7,7 @@ The original data files can be downloaded from the website:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The data package contains the following files that will be used to prepare a tidy dataset for further analysis.
+The data package contains the following files that will be used by the program to prepare a tidy dataset for further analysis.
 
 | File Name              | Data                                 | Size     |
 | :------------------------ |:-------------------------------------- | :---------- | 
@@ -21,5 +21,5 @@ The data package contains the following files that will be used to prepare a tid
 | test/subject_test.txt  | Test subjects                        | 2947x1   |
 
 
-In this project, the code *run_analysis.R* was built and tested using **RStudio** (Version 0.99.489)
+In this project, the code *run_analysis.R* was built and tested using **RStudio** (Version 0.99.489).
 Make sure the *dplyr* library is properly loaded when running the code.
