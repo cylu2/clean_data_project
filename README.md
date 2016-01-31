@@ -24,14 +24,14 @@ The data package contains the following files that will be used by the program t
 
 | File Name              | Data                                 | Size     |
 | :------------------------ |:-------------------------------------- | :---------- | 
-| features.txt           | List of all features                 | 561x2    |
-| activity_labels.txt    | Activity indices and names           | 6x2      |
-| train/X_train.txt      | Training set                         | 7352x561 |
-| train/y_train.txt      | Training labels                      | 7352x1   |
-| train/subject_test.txt | Train subjects                       | 7352x1   |
-| test/X_test.txt        | Test set                             | 2947x561 |
-| test/y_test.txt        | Test labels                          | 2947x1   |
-| test/subject_test.txt  | Test subjects                        | 2947x1   |
+| features.txt           | List of all features                 | 561 x 2    |
+| activity_labels.txt    | Activity indices and names           | 6 x 2      |
+| train/X_train.txt      | Training set                         | 7352 x 561 |
+| train/y_train.txt      | Training labels                      | 7352 x 1   |
+| train/subject_test.txt | Train subjects                       | 7352 x 1   |
+| test/X_test.txt        | Test set                             | 2947 x  561 |
+| test/y_test.txt        | Test labels                          | 2947 x 1   |
+| test/subject_test.txt  | Test subjects                        | 2947 x 1   |
 
 ### Running Code
 
