@@ -119,13 +119,14 @@ In this code, the raw data is clean in the following steps:
 3. Use gsub(...) to replace the activity indices by the corresponding activity names, and replace the Activity column by the new name list.
 4. The feature names selected in step 2 are transformed by removing symbols and capitalizing/modifying certain letters for improving readability.
 
-```
-tmp <- gsub("^f", "freq", smallFeatNames, perl = TRUE)  # f -> freq  
-tmp <- gsub("^t", "time", tmp, perl = TRUE)             # t -> time
-tmp <- gsub("-(\\w)", "\\U\\1", tmp, perl = TRUE)       # Capitalize the first letter after '-'
-tmp <- gsub("\\(|\\)", "", tmp)                         # Remove parenthesis 
-tmp <- gsub("\\,", "\\.", tmp)                          # Replace ',' by '.' if has any
-```
+  ```
+  tmp <- gsub("^f", "freq", smallFeatNames, perl = TRUE)  # f -> freq  
+  tmp <- gsub("^t", "time", tmp, perl = TRUE)             # t -> time
+  tmp <- gsub("-(\\w)", "\\U\\1", tmp, perl = TRUE)       # Capitalize the first letter after '-'
+  tmp <- gsub("\\(|\\)", "", tmp)                         # Remove parenthesis 
+  tmp <- gsub("\\,", "\\.", tmp)                          # Replace ',' by '.' if has any
+  ```
+
   Examples:
 
   | Old        | New                       |  
