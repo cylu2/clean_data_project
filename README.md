@@ -1,9 +1,7 @@
 # Getting and Cleaning Data Course Project
 
 This project uses data from the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
-Learning Repository</a>, a popular repository for machine learning datasets.
-
-The data we are interested in was originally collected from the accelerometers from the 
+Learning Repository</a>, a popular repository for machine learning datasets. The data we are interested in was originally collected from the accelerometers from the 
 Samsung Galaxy S smartphone for the study of *Human Activity Recognition Using Smartphones Dataset*.
 
 The original data files can be found on the website:
